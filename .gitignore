@@ -1,0 +1,31 @@
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data files
+data/raw/
+data/bronze/
+data/silver/
+data/gold/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
