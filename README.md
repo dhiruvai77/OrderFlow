@@ -27,18 +27,14 @@ Raw datasets are excluded from version control.
 
 ## Project Roadmap
 
-- [x] Initialize project structure
-- [x] Download and profile the Olist dataset
-- [x] Configure Python, Java, and PySpark
-- [x] Implement reusable Bronze ingestion
-- [x] Convert all nine CSV datasets to Parquet
-- [x] Validate Bronze datasets and review records
-- [ ] Implement Silver data transformations
+- [x] Complete Bronze ingestion and validation
+- [x] Implement Silver transformations
+- [x] Validate Silver schemas and relationships
 - [ ] Build Gold analytical models
 - [ ] Implement PostgreSQL and dbt
 - [ ] Add Airflow orchestration
 - [ ] Implement Kafka streaming
-- [ ] Build dashboards
+- [ ] Build business dashboards
 - [ ] Add Docker and cloud deployment
 
 ## Architecture Documentation
@@ -59,6 +55,20 @@ Validate Bronze datasets:
 Validate all review records:
 
     python scripts\validate_reviews_full.py
+
+
+## Silver Layer
+
+The Silver Layer contains nine typed and validated
+Parquet datasets transformed using PySpark.
+
+### Run Silver validation
+
+python scripts\silver\validate_silver.py
+
+### Documentation
+
+[Silver Layer Architecture](docs/silver_architecture.md)
 
 
 ## Getting Started
