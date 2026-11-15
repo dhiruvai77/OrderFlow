@@ -70,6 +70,28 @@ python scripts\silver\validate_silver.py
 
 [Silver Layer Architecture](docs/silver_architecture.md)
 
+## Gold Layer — Dimensional Data Models
+
+The Gold Layer uses PySpark and Parquet to build eight
+analytical models:
+
+**Dimensions**
+- dim_customer
+- dim_seller
+- dim_product
+- dim_date
+
+**Facts**
+- fct_order_items
+- fct_payments
+- fct_orders
+- fct_reviews
+
+### Validate Gold
+
+```cmd
+python scripts\gold\validate_gold.py
+
 
 ## Getting Started
 
