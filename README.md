@@ -24,19 +24,42 @@ Raw datasets are excluded from version control.
 - MinIO / AWS S3
 - SQL and business intelligence dashboards
 
+
 ## Project Roadmap
 
-- [x] Create local project structure
-- [x] Download the Olist dataset
-- [x] Run initial dataset inspection
-- [ ] Complete data profiling
-- [ ] Implement batch ingestion with PySpark
-- [ ] Create bronze, silver, and gold layers
-- [ ] Build dimensional warehouse models
-- [ ] Add orchestration using Airflow
-- [ ] Implement simulated real-time streaming
-- [ ] Build analytics dashboards
-- [ ] Add monitoring and deployment
+- [x] Initialize project structure
+- [x] Download and profile the Olist dataset
+- [x] Configure Python, Java, and PySpark
+- [x] Implement reusable Bronze ingestion
+- [x] Convert all nine CSV datasets to Parquet
+- [x] Validate Bronze datasets and review records
+- [ ] Implement Silver data transformations
+- [ ] Build Gold analytical models
+- [ ] Implement PostgreSQL and dbt
+- [ ] Add Airflow orchestration
+- [ ] Implement Kafka streaming
+- [ ] Build dashboards
+- [ ] Add Docker and cloud deployment
+
+## Architecture Documentation
+
+- [Data Profiling](docs/data_profiling.md)
+- [Bronze Layer Architecture](docs/bronze_architecture.md)
+
+## Bronze Pipeline
+
+Run ingestion:
+
+    python scripts\ingest_all.py
+
+Validate Bronze datasets:
+
+    python scripts\validate_bronze.py
+
+Validate all review records:
+
+    python scripts\validate_reviews_full.py
+
 
 ## Getting Started
 
